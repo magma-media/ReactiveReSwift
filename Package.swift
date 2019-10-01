@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
   name: "ReactiveReSwift",
   platforms: [
-    .iOS(.v10),
+    .iOS(.v8),
   ],
   products: [
     .library(name: "ReactiveReSwift", targets: ["ReactiveReSwift"]),
