@@ -4,17 +4,12 @@ import PackageDescription
 let package = Package(
   name: "ReactiveReSwift",
   platforms: [
-    .iOS(.v8),
+    .iOS(.v10),
   ],
   products: [
     .library(name: "ReactiveReSwift", targets: ["ReactiveReSwift"]),
   ],
   targets: [
     .target(name: "ReactiveReSwift", path: "Sources"),
-  ],
-  exclude: [
-    "Tests",
-    "Carthage",
-    "Docs",
   ]
 )
