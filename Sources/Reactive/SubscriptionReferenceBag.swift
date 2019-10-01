@@ -6,6 +6,8 @@
 //  Copyright © 2016 Benjamin Encz. All rights reserved.
 //
 
+import Foundation
+
 /**
  A class to hold subscriptions to `SubscriptionReferenceType`.
  Very similar to `autoreleasepool` but specifically for disposable types.

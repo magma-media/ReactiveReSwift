@@ -6,6 +6,8 @@
 //  Copyright © 2016 Benjamin Encz. All rights reserved.
 //
 
+import Foundation
+
 /// The subscription reference type of `ObservableProperty`.
 public struct ObservablePropertySubscriptionReference<T> {
     internal let key: String

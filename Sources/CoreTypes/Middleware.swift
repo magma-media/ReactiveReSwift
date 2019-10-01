@@ -6,6 +6,8 @@
 //  Copyright © 2016 Charlotte Tortorella. All rights reserved.
 //
 
+import Foundation
+
 /**
  Middleware is a structure that allows you to modify, filter out and dispatch more
  actions, before the action being handled reaches the store.

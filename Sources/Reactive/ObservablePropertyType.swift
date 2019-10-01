@@ -6,6 +6,8 @@
 //  Copyright © 2016 Benjamin Encz. All rights reserved.
 //
 
+import Foundation
+
 /**
  A protocol that denotes a type that stores a value and
  sends updates when the underlying value changes.

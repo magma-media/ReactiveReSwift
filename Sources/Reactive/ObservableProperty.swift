@@ -6,6 +6,8 @@
 //  Copyright © 2016 Benjamin Encz. All rights reserved.
 //
 
+import Foundation
+
 /**
  This class is the default implementation of the `ObservablePropertyType` protocol. It is recommended
  that you do not use this observable and instead use an observable from a full FRP library.

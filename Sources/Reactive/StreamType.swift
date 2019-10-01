@@ -6,6 +6,8 @@
 //  Copyright © 2016 Benjamin Encz. All rights reserved.
 //
 
+import Foundation
+
 /// A protocol that denotes a type that sends values over time.
 public protocol StreamType {
     /// The type of the values within the `Stream`.
