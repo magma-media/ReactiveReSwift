@@ -18,6 +18,8 @@ open class Store<ObservableProperty: ObservablePropertyType> {
     private let middleware: StoreMiddleware
     private let reducer: StoreReducer
     private let disposeBag = SubscriptionReferenceBag()
+    
+    private let serialQueue = DispatchQueue(label: "ReactiveReSwift.SerialQueue")
 
     public required init(reducer: @escaping StoreReducer, observable: ObservableProperty, middleware: StoreMiddleware = Middleware()) {
         self.reducer = reducer
@@ -31,7 +33,10 @@ open class Store<ObservableProperty: ObservablePropertyType> {
                 actions.forEach { self?.dispatch($0) }
             }
             middleware.transform({ self.observable.value }, dispatchFunction, action).forEach { action in
-                observable.value = reducer(action, observable.value)
+                serialQueue.sync {
+                    let newValue = reducer(action, observable.value)
+                    observable.value = newValue
+                }
             }
         }
     }
